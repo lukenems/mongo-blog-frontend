@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <header>
       <div className="container">
-        <link to='/'>
+        <Link to='/'>
           <h1>Mongo Blog</h1>
-        </link>
+        </Link>
 
       </div>
     </header>

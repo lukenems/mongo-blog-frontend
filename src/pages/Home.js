@@ -1,7 +1,28 @@
+import { useEffect, useState } from 'react';
+
 const Home = () => {
+
+  const [posts, setPosts] = useState(null)
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      const response = await fetch('/api/posts');
+      const json = await response.json()
+
+      if(response.ok) {
+        setPosts(json)
+      }
+    }
+    fetchBlogPosts()
+  }, [])
+
   return (
     <div className="home">
-      <h2>Home Page</h2>
+      <div className="posts">
+        {posts && posts.map((post) => (
+          <p id={post._id}>{post.title}</p>
+        ))}
+      </div>
     </div>
   )
 }
