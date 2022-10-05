@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import BlogPost from '../components/blogPost';
+import PostForm from '../components/postForm';
 
 const Home = () => {
   const [posts, setPosts] = useState(null)
@@ -21,6 +22,7 @@ const Home = () => {
           <BlogPost key={post._id} post={post} />
         ))}
       </div>
+      <PostForm />
     </div>
   )
 }
