@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import BlogPost from '../components/blogPost';
 import PostForm from '../components/postForm';
+import { usePostsContext } from '../hooks/usePostsContext';
 
 const Home = () => {
-  const [posts, setPosts] = useState(null)
+  const {posts, dispatch} = usePostsContext();
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
       const response = await fetch('/api/posts');
       const json = await response.json()
 
-      if(response.ok) setPosts(json)
+      if(response.ok) dispatch({type: 'GET_POSTS', payload: json})
     }
     fetchBlogPosts()
   }, [])
