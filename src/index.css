@@ -37,3 +37,9 @@ header a {
   padding: 20px;
   margin: 0 auto;
 }
+
+#nav-icon {
+  height: 100px;
+  position: absolute;
+  top: 15px;
+}
