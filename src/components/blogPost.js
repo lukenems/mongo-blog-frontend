@@ -1,6 +1,4 @@
-
 const BlogPost = ({ post }) => {
-  console.log(post)
   return (
     <div className="post-details">
       <h3 className="title">{post.title}</h3>

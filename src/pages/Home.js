@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import BlogPost from '../components/blogPost';
 
 const Home = () => {
-
   const [posts, setPosts] = useState(null)
 
   useEffect(() => {
@@ -10,9 +9,7 @@ const Home = () => {
       const response = await fetch('/api/posts');
       const json = await response.json()
 
-      if(response.ok) {
-        setPosts(json)
-      }
+      if(response.ok) setPosts(json)
     }
     fetchBlogPosts()
   }, [])
