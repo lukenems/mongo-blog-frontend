@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import BlogPost from '../components/blogPost';
-import PostForm from '../components/postForm';
 import { usePostsContext } from '../hooks/usePostsContext';
 
-const Home = () => {
+const Blog = () => {
   const {posts, dispatch} = usePostsContext();
 
   useEffect(() => {
@@ -23,9 +22,8 @@ const Home = () => {
           <BlogPost key={post._id} post={post} />
         ))}
       </div>
-      <PostForm />
     </div>
   )
 }
 
-export default Home;
+export default Blog;

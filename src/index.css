@@ -43,3 +43,8 @@ header a {
   position: absolute;
   top: 15px;
 }
+
+.form-container {
+  max-width: 1000px;
+  margin: auto;
+}

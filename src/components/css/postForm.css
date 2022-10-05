@@ -1,0 +1,50 @@
+.create {
+  display: flex;
+  flex-direction: column;
+}
+
+.create h1 {
+  font-family: marshmallow-fluff, sans-serif;
+  font-size: 3em;
+}
+
+.create input, textarea {
+  flex-grow: 1;
+  width: 600px;
+  max-width: 800px;
+  margin: auto;
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
+}
+
+textarea:focus {
+  font-size: 1.5em;
+}
+
+.create button {
+  font-family: marshmallow-fluff, sans-serif;
+  border: none;
+  margin: auto;
+  width: 200px;
+  height: 100px;
+  padding: 30px;
+  border-radius: 100%;
+  font-size: 20px;
+  transition: background-color 1s ease-out;
+}
+
+.create button:hover {
+  background: greenyellow;
+  /* animation: spinMe 1s forwards; */
+  cursor: url('../../assets/icons/mongo-pointer.png') 16 16, auto;
+}
+
+@keyframes spinMe {
+  to {
+      transform: rotate(2turn)
+  }
+}
