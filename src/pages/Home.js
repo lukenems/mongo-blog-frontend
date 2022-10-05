@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import BlogPost from '../components/blogPost';
 
 const Home = () => {
 
@@ -20,7 +21,7 @@ const Home = () => {
     <div className="home">
       <div className="posts">
         {posts && posts.map((post) => (
-          <p id={post._id}>{post.title}</p>
+          <BlogPost key={post._id} post={post} />
         ))}
       </div>
     </div>
