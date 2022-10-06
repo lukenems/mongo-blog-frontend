@@ -11,7 +11,8 @@ const Navbar = () => {
           <Link to='/'>
           <img id="nav-icon" src={mongoIcon} alt="" />
           </Link>
-          </div>
+        </div>
+        <Link to='/write'>Logging</Link>
       </div>
     </header>
   )

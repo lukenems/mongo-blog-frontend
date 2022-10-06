@@ -1,11 +1,15 @@
 import { useState } from "react";
+import './css/loginForm.css'
 
 const LoginForm = () => {
-  const [user, setUser] = useState('dev');
+  let [user, setUser] = useState('');
   const [pwd, setPwd] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    user === '' 
+      ? user = 'dev'
+      : user = ''
     console.log(user, pwd);
 
     //AUTH post here : will probly use different header?
@@ -21,21 +25,19 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="login-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="login">
         <input 
           type="text" 
-          value={''}
+          value={user}
           onChange={(e) => setUser(e.target.value)}
         />
+        <button>Login</button>
         <input
           type="text"
           value={pwd}
           onChange={(e) => setPwd(e.target.value)}
         />
-        <button>Login</button>
       </form>
-    </div>
   )
 }
 
