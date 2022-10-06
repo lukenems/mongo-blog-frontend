@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import BlogPost from '../components/blogPost';
 import { usePostsContext } from '../hooks/usePostsContext';
+import './blog.css';
 
 const Blog = () => {
   const {posts, dispatch} = usePostsContext();
@@ -17,7 +18,7 @@ const Blog = () => {
 
   return (
     <div className="home">
-      <div className="posts">
+      <div className="posts-container">
         {posts && posts.map((post) => (
           <BlogPost key={post._id} post={post} />
         ))}

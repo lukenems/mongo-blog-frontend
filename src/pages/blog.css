@@ -1,0 +1,24 @@
+.home {
+  padding: 40px 100px 40px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.posts-container {
+  display: flex;
+  padding: 20px;
+  background: #f1ecddfc;
+  border-radius: 1em;
+  flex-direction: column;
+}
+
+.post-details {
+  background: #ffffff;
+  /* #cfe5e0 */
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.post-details:last-child {
+  margin-bottom: 0;
+}
