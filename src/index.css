@@ -9,6 +9,12 @@
   --primary: #1aac83;
   --error: #e7195a;
 }
+
+.app {
+  overflow: hidden;
+}
+
+
 body {
   background: #f1f1f1;
   margin: 0;
@@ -44,6 +50,7 @@ header a {
   position: absolute;
   top: 15px;
 }
+
 
 .form-container {
   max-width: 1000px;

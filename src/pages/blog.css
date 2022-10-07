@@ -1,3 +1,10 @@
+@import 'animate.css';
+
+/* Animation Edites */
+.animate__animated.animate__fadeOutDown {
+  --animate-duration: 2s;
+}
+
 .home {
   padding: 40px 100px 40px;
   max-width: 700px;
@@ -6,10 +13,13 @@
 
 .posts-container {
   display: flex;
-  padding: 20px;
   background: #f1ecddfc;
   border-radius: 1em;
   flex-direction: column;
+  margin: 40px auto;
+  max-width: 700px;
+  padding: 40px 50px 40px;
+  overflow: hidden;
 }
 
 .post-details {
@@ -21,4 +31,64 @@
 
 .post-details:last-child {
   margin-bottom: 0;
+}
+
+.falling-mongo {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  /* top: 150px;
+  left: 100px; */
+  animation: 5s ease-in-out infinite .5s fadeOutFirst;
+}
+
+.falling-mongoSecond {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  animation: 3s ease-in-out infinite .5s fadeOutSecond;
+}
+
+.falling-mongoThird {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  animation: 8s ease-in-out infinite .5s fadeOutThird;
+}
+
+@keyframes fadeOutFirst {
+  0% {
+    opacity: .3;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+}
+@keyframes fadeOutSecond {
+  0% {
+    opacity: .3;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+}
+@keyframes fadeOutThird {
+  0% {
+    opacity: .3;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(800px);
+  }
 }
