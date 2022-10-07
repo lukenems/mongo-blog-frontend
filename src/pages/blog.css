@@ -29,22 +29,20 @@
 .falling-mongo {
   position: absolute;
   z-index: -1;
-  width: 50px;
-  /* top: 150px;
-  left: 100px; */
+  width: 30px;
   animation: 5s ease-in-out infinite .5s fadeOutFirst;
 }
 
 .falling-mongoSecond {
   position: absolute;
   z-index: -1;
-  width: 50px;
+  width: 40px;
   animation: 3s ease-in-out infinite .5s fadeOutSecond;
 }
 
 .falling-mongoThird {
   position: absolute;
-  z-index: -1;
+  /* z-index: -1; */
   width: 50px;
   animation: 8s ease-in-out infinite .5s fadeOutThird;
 }
@@ -58,7 +56,9 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(400px);
+    transform: 
+      translateY(400px)
+      rotate(60deg);
   }
 }
 @keyframes fadeOutSecond {
@@ -70,7 +70,9 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(400px);
+    transform: 
+      translateY(400px)
+      rotate(-30deg);
   }
 }
 @keyframes fadeOutThird {
@@ -82,6 +84,8 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(800px);
+    transform: 
+      translateY(800px)
+      rotate(-450deg);
   }
 }

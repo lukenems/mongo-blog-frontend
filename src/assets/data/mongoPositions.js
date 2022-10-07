@@ -17,7 +17,7 @@ export const mongoPositions = [
     y: '90%'
   },
   {
-    x: '98%',
+    x: '95%',
     y: '10%'
   },
   {
@@ -85,7 +85,7 @@ export const mongoPositions = [
     y: '40%'
   },
   {
-    x: '91%',
+    x: '84%',
     y: '2%'
   },
   {
