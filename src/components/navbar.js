@@ -12,7 +12,11 @@ const Navbar = () => {
           <img id="nav-icon" src={mongoIcon} alt="" />
           </Link>
         </div>
-        <Link to='/write'>Logging</Link>
+        <nav>
+          <div>
+            <Link to='/write'>Logging</Link>
+          </div>
+        </nav>
       </div>
     </header>
   )

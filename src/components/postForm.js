@@ -13,10 +13,8 @@ const PostForm = () => {
     e.currentTarget.classList.add('button-swirl')
   }
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
     const completePost = {title, content, dreamspellDate};
     const response = await fetch('/api/posts', {
       method: 'POST',
@@ -26,13 +24,12 @@ const PostForm = () => {
       }
     })
     const json = await response.json();
-
     !response.ok 
      ? setError(json.msg)
-     : setTitle('');
-        setContent('');
-        setDreamspellDate('');
-        setError(null);
+     : setTitle('')
+        setContent('')
+        setDreamspellDate('')
+        setError(null)
         dispatch({type: 'CREATE_POST', payload:json});
   }
 

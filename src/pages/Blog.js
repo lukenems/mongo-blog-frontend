@@ -3,16 +3,17 @@ import BlogPost from '../components/blogPost';
 import { usePostsContext } from '../hooks/usePostsContext';
 import './blog.css';
 import  InitMongos from '../components/css/fallingMongoBkgd';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 const Blog = () => {
-  const {posts, dispatch} = usePostsContext();
+  const {posts, dispatchPost} = usePostsContext();
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
       const response = await fetch('/api/posts');
       const json = await response.json()
 
-      if(response.ok) dispatch({type: 'GET_POSTS', payload: json})
+      if(response.ok) dispatchPost({type: 'GET_POSTS', payload: json})
     }
     fetchBlogPosts()
   }, [])
