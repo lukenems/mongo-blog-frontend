@@ -3,7 +3,7 @@ import mongoIcon from '../assets/icons/mongo-icon.png';
 import { useLogout } from '../hooks/useLogout';
 
 const Navbar = () => {
-  const logout = useLogout;
+  const { logout } = useLogout();
   const handleClick = () => {
     logout();
   }

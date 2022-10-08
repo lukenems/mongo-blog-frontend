@@ -39,3 +39,9 @@ button {
 button:hover {
   cursor: crosshair;
 }
+
+.error {
+  color: #fff;
+  font-size: 1em;
+  margin: 0;
+}

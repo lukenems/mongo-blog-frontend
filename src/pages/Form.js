@@ -4,9 +4,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 const Form = () => {
   const {user} = useAuthContext();
-  //check if logged in, then show new post form
-  // else, show login form
-  console.log(user)
+
   return (
     <div className="form-container">
       {

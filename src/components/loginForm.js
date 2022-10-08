@@ -15,23 +15,27 @@ const LoginForm = () => {
     author === '' 
       ? author = 'dev'
       : author = ''
-    console.log(author, pwd);
 
-    //AUTH post here : will probly use different header?
     const response = await fetch('/api/auth/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({author, pwd})
+      body: JSON.stringify({author, password:pwd})
     })
-    const json = response.json();
-    !response.ok 
-      ? setError(json.msg)
-      : localStorage.setItem('user', JSON.stringify(json));
-          setAuthor('')
-          setPwd('')
-          setError(null)
-          setIsLoading(false)
-          dispatch({type: 'LOGIN', payload:json});
+    const json = await response.json();
+
+    if(!response.ok) {
+      setError(json.error);
+      setAuthor('');
+      setPwd('');
+      setIsLoading(false);
+    } else {
+      localStorage.setItem('user', JSON.stringify(json));
+      setAuthor('');
+      setPwd('');
+      setError(null);
+      setIsLoading(false);
+      dispatch({type: 'LOGIN', payload:json});
+    }
   }
 
   return (
