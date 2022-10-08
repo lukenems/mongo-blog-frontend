@@ -3,7 +3,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 import './css/loginForm.css'
 
 const LoginForm = () => {
-  const {dispatch} = useAuthContext;
+  const { dispatch } = useAuthContext();
   let [author, setAuthor] = useState('');
   const [pwd, setPwd] = useState('');
   const [error, setError] = useState(null);
@@ -32,7 +32,6 @@ const LoginForm = () => {
           setError(null)
           setIsLoading(false)
           dispatch({type: 'LOGIN', payload:json});
-
   }
 
   return (

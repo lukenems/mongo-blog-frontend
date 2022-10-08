@@ -1,7 +1,7 @@
 import { createContext, useReducer } from "react";
 
 export const AuthContext = createContext();
-export const AuthReducer = (state, action) => {
+export const authReducer = (state, action) => {
   switch(action.type) {
     case 'LOGIN':
       return {
@@ -14,16 +14,15 @@ export const AuthReducer = (state, action) => {
     default:
       return state
   }
-
 };
 
-export const PostContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AuthReducer, {
+export const AuthContextProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(authReducer, {
     //original state established here
     user: null
   })
   // dispatch({type:'', payload:[]})
-  console.log(`Auth state: ${state}`)
+  console.log(`Auth state: ${JSON.stringify(state)}`)
   return (
     <AuthContext.Provider value={{...state, dispatch}}>
       { children }

@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         <nav>
           <div>
-            <button onClick={handleClick}>return 2 AFK</button>
+            <button onClick={handleClick} style={{color:"black"}}>return 2 AFK</button>
             <Link to='/write'>Logging</Link>
           </div>
         </nav>
