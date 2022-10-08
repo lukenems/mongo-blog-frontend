@@ -51,19 +51,19 @@ const PostForm = () => {
           value={title}
           placeholder="Title"
         />
+          <textarea
+            type='text'
+            onChange={(e) => setContent(e.target.value)}
+            value={content}
+            placeholder='What went down today?'
+            rows='16'
+          /> 
         <input 
-          type='text'
-          onChange={(e) => setContent(e.target.value)}
-          value={content}
-          placeholder='What went down today?'
-        />
-        <textarea
           type='text'
           onChange={(e) => setDreamspellDate(e.target.value)}
           value={dreamspellDate}
           placeholder='Dreamspell Date'
-          rows='16'
-        /> 
+        />
       <button onClick={handleOnClick} type='submit'>Peace</button>
       {error && <div className='error'>{error}</div>}
     </form>

@@ -1,3 +1,6 @@
+/* adobe font */
+@import url("https://use.typekit.net/zrt8hcx.css");
+
 .login {
   display: flex;
   flex-direction: column;
@@ -14,7 +17,8 @@
   font-size: 1.5em;
   border: none;
   outline: none;
-  background: #fff;
+  background: none;
+  color: #fff
 }
 
 .login input:hover {
@@ -25,7 +29,11 @@ button {
   border: none;
   outline: none;
   width: 100px;
-  height: 20px
+  height: 60px;
+  background: none;
+  font-family: marshmallow-fluff, sans-serif;
+  color: #fff;
+  font-size: 20px;
 }
 
 button:hover {

@@ -2,15 +2,15 @@ import { useState } from "react";
 import './css/loginForm.css'
 
 const LoginForm = () => {
-  let [user, setUser] = useState('');
+  let [author, setAuthor] = useState('');
   const [pwd, setPwd] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    user === '' 
-      ? user = 'dev'
-      : user = ''
-    console.log(user, pwd);
+    author === '' 
+      ? author = 'dev'
+      : author = ''
+    console.log(author, pwd);
 
     //AUTH post here : will probly use different header?
     //const signIn = {user, pwd};
@@ -28,8 +28,8 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit} className="login">
         <input 
           type="text" 
-          value={user}
-          onChange={(e) => setUser(e.target.value)}
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
         />
         <button>Login</button>
         <input
