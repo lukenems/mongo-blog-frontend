@@ -4,16 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { PostContextProvider } from './context/PostsContext';
+import { AuthContextProvider } from './context/AuthContext';
 
 //can re-enable strict mode in Prod env
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
-    <PostContextProvider>
-      <App />
-    </PostContextProvider>
-  //</React.StrictMode>
+// <React.StrictMode>
+    <AuthContextProvider>
+      <PostContextProvider>
+        <App />
+      </PostContextProvider>
+    </AuthContextProvider>
+//</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

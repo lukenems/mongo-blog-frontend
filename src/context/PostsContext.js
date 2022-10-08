@@ -27,6 +27,4 @@ export const PostContextProvider = ({ children }) => {
       { children }
     </PostContext.Provider>
   )
-
 }
-
