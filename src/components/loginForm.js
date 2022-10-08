@@ -14,7 +14,9 @@ const LoginForm = () => {
       ? author = 'dev'
       : author = ''
 
-    await login(author, pwd)    
+    await login(author, pwd)
+    setAuthor('')
+    setPwd('')
   }
 
   return (

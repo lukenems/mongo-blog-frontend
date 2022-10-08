@@ -3,14 +3,14 @@ import { usePostsContext } from '../hooks/usePostsContext';
 import './css/postForm.css'
 
 const PostForm = () => {
-  const {dispatch} = usePostsContext;
+  const {dispatch} = usePostsContext();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [dreamspellDate, setDreamspellDate] = useState('');
   const [error, setError] = useState(null);
 
   const handleOnClick = (e) => {
-    e.currentTarget.classList.add('button-swirl')
+    e.currentTarget.classList.add('button-swirl');
   }
 
   const handleSubmit = async (e) => {
@@ -24,24 +24,22 @@ const PostForm = () => {
       }
     })
     const json = await response.json();
-    !response.ok 
-     ? setError(json.msg)
-     : setTitle('')
-        setContent('')
-        setDreamspellDate('')
-        setError(null)
-        dispatch({type: 'CREATE_POST', payload:json});
+
+    if (!response.ok) {
+      setError(json.msg);
+    }
+    if (response.ok) {
+      setTitle('');
+      setContent('');
+      setDreamspellDate('');
+      setError(null);
+      dispatch({type: 'CREATE_POST', payload:json});
+    }
   }
 
   return (
     <form className="create" onSubmit={handleSubmit}>
       <h1>Dump the day</h1>
-
-      {/* <label class="custom-field">
-            <input type="email"/>
-            <span class="placeholder">Enter Email</span>
-          </label> 
-      */}
         <input 
           type='text'
           onChange={(e) => setTitle(e.target.value)}

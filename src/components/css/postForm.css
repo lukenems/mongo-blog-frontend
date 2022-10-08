@@ -39,8 +39,11 @@ textarea {
 
 .create button:hover {
   background: greenyellow;
-  /* animation: spinMe 1s forwards; */
   cursor: url('../../assets/icons/mongo-pointer.png') 16 16, auto;
+}
+
+.button-swirl {
+  animation: spinMe 1s forwards;
 }
 
 @keyframes spinMe {

@@ -2,7 +2,7 @@ import { createContext, useReducer } from "react";
 
 export const PostContext = createContext();
 export const postsReducer = (state, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'GET_POSTS':
       return {
         posts: action.payload

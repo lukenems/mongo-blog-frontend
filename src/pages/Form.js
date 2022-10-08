@@ -4,13 +4,13 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 const Form = () => {
   const {user} = useAuthContext();
+  
 
   return (
     <div className="form-container">
-      {
-        user
-         ? <PostForm />
-         : <LoginForm />
+      { user
+          ? <PostForm />
+          : <LoginForm />
       }
     </div>
   )
