@@ -1,9 +1,12 @@
 import {useState} from 'react';
 import { usePostsContext } from '../hooks/usePostsContext';
+import { useAuthContext } from '../hooks/useAuthContext';
 import './css/postForm.css'
 
 const PostForm = () => {
   const {dispatch} = usePostsContext();
+  const {user} = useAuthContext();
+
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [dreamspellDate, setDreamspellDate] = useState('');
@@ -15,16 +18,21 @@ const PostForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!user) { 
+      setError('You gotta be logged in')
+      return
+    }
+
     const completePost = {title, content, dreamspellDate};
     const response = await fetch('/api/posts', {
       method: 'POST',
       body: JSON.stringify(completePost),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${user.token}`
       }
     })
     const json = await response.json();
-
     if (!response.ok) {
       setError(json.msg);
     }

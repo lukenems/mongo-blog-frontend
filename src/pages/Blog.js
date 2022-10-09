@@ -3,7 +3,6 @@ import BlogPost from '../components/blogPost';
 import { usePostsContext } from '../hooks/usePostsContext';
 import './blog.css';
 import  InitMongos from '../components/css/fallingMongoBkgd';
-// import { useAuthContext } from '../hooks/useAuthContext';
 
 const Blog = () => {
   const {posts, dispatch} = usePostsContext();
