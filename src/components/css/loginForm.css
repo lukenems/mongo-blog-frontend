@@ -25,15 +25,15 @@
   cursor: default;
 }
 
-button {
+#login {
   border: none;
   outline: none;
-  width: 100px;
+  width: 120px;
   height: 60px;
   background: none;
   font-family: marshmallow-fluff, sans-serif;
   color: #fff;
-  font-size: 20px;
+  font-size: 2em;
 }
 
 button:hover {

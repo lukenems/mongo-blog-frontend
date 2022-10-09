@@ -2,8 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Blog from './pages/Blog';
 import Navbar from './components/navbar';
 import Form from './pages/Form';
+import { useAuthContext } from './hooks/useAuthContext';
 
 function App() {
+  
+
   return (
     <div className="App">
       <BrowserRouter>

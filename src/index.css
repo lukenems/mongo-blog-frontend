@@ -1,5 +1,5 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lustria&family=Passero+One&display=swap');
 /* adobe font */
 @import url("https://use.typekit.net/zrt8hcx.css");
 
@@ -14,14 +14,13 @@
   overflow: hidden;
 }
 
-
 body {
   background-image: url('../public/kalobkg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
-  font-family: "Poppins";
+  font-family: "Lustria", serif;
 }
 header {
   background: #fff;
@@ -39,8 +38,11 @@ header .container {
   font-style: normal;
 }
 header a {
-  color: #333;
+  color: #000;
   text-decoration: none;
+  width: 100px;
+  font-family: 'Passero One', cursive;
+  font-size: 1.5em;
 }
 .pages{
   max-width: 1400px;
@@ -48,12 +50,27 @@ header a {
   margin: 0 auto;
 }
 
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 60px;
+  background: none;
+  color: #fff;
+  font-family: 'Passero One', cursive;
+  font-size: 1.5em;
+}
+
 #nav-icon {
   height: 100px;
   position: absolute;
   top: 15px;
 }
-
 
 .form-container {
   max-width: 1000px;

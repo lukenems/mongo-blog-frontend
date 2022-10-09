@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import mongoIcon from '../assets/icons/mongo-icon.png';
 import { useLogout } from '../hooks/useLogout';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 const Navbar = () => {
   const { logout } = useLogout();
+  const { user } = useAuthContext();
   const handleClick = () => {
     logout();
   }
@@ -19,8 +21,17 @@ const Navbar = () => {
         </div>
         <nav>
           <div>
-            <button onClick={handleClick} style={{color:"black"}}>return 2 AFK</button>
-            <Link to='/write'>Logging</Link>
+            { user 
+              ? <button onClick={handleClick} style={{color:"black"}}>return 2 AFK</button>
+              : null
+            }
+            <Link to='/write'>
+              {
+                user
+                  ? 'Write'
+                  :'Login'
+              }
+            </Link>
           </div>
         </nav>
       </div>

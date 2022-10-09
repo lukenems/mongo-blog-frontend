@@ -26,7 +26,7 @@ const LoginForm = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <button disabled={isLoading}>Login</button>
+        <button id="login" disabled={isLoading}>Login</button>
         {error && <div className='error'>{error}</div>}
         <input
           type="text"
