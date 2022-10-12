@@ -15,7 +15,7 @@ const Blog = () => {
       if(response.ok) dispatch({type: 'GET_POSTS', payload: json});
     }
     fetchBlogPosts()
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="posts-container">
