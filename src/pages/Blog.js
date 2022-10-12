@@ -9,7 +9,7 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
-      const response = await fetch('/api/posts');
+      const response = await fetch('https://mongo-blog-369.herokuapp.com/api/posts');
       const json = await response.json();
 
       if(response.ok) dispatch({type: 'GET_POSTS', payload: json});

@@ -26,7 +26,7 @@ const PostForm = () => {
     }
 
     const completePost = {title, content, dreamspellDate};
-    const response = await fetch('/api/posts', {
+    const response = await fetch('https://mongo-blog-369.herokuapp.com/api/posts', {
       method: 'POST',
       body: JSON.stringify(completePost),
       headers: {
