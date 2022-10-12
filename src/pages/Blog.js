@@ -10,9 +10,9 @@ const Blog = () => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       const response = await fetch('/api/posts');
-      const json = await response.json()
+      const json = await response.json();
 
-      if(response.ok) dispatch({type: 'GET_POSTS', payload: json})
+      if(response.ok) dispatch({type: 'GET_POSTS', payload: json});
     }
     fetchBlogPosts()
   }, [])

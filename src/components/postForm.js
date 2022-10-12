@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { usePostsContext } from '../hooks/usePostsContext';
 import { useAuthContext } from '../hooks/useAuthContext';
 import './css/postForm.css'
@@ -7,6 +7,7 @@ import './css/postForm.css'
 const PostForm = () => {
   const {dispatch} = usePostsContext();
   const {user} = useAuthContext();
+  const navigate = useNavigate();
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -43,7 +44,7 @@ const PostForm = () => {
       setDreamspellDate('');
       setError(null);
       dispatch({type: 'CREATE_POST', payload:json});
-      return redirect("/");
+      navigate("/");
     }
   }
 
