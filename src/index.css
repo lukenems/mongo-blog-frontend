@@ -86,13 +86,15 @@ button {
     height: 60px;
     top: 25px;
   }
+  body {
+    background-image: url('../public/kalobkg_mobile.png');
+  }
 }
 
 @media screen and (max-width: 450px) {
   #nav-icon {
     height: 60px;
     top: 80px;
-    left: 120px;
+    left: 125px;
   }
-
 }
