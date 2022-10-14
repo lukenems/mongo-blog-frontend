@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import mongo from '../../assets/icons/mongo-icon.png';
 import { mongoPositions as mongoPos } from '../../assets/data/mongoPositions';
 import '../css/fallingMongos.css'
