@@ -1,17 +1,16 @@
+import { useEffect, useState } from 'react';
 import mongo from '../../assets/icons/mongo-icon.png';
 import { mongoPositions as mongoPos } from '../../assets/data/mongoPositions';
 import '../css/fallingMongos.css'
-import { useEffect } from 'react';
 
 const InitMongos = () => {
-
   
   useEffect(() => {
-    const divs = document.querySelectorAll('.mongo');
-    updatePos(divs)
-  },[])
+    updatePos();
+  })
 
-  const updatePos = (divs) => {
+  const updatePos = () => {
+    const divs = document.querySelectorAll('.mongo');
     for (let div of divs) {
       let mongoIndexX = Math.round(Math.random()*23);
       let mongoIndexY = Math.round(Math.random()*23);
