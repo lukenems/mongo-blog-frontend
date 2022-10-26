@@ -81,6 +81,8 @@ button {
   margin: auto;
 }
 
+/* Start Media Queries */
+
 @media screen and (max-width: 768px) {
   #nav-icon {
     height: 60px;
@@ -98,3 +100,5 @@ button {
     left: 125px;
   }
 }
+
+/* End Media Queries */
